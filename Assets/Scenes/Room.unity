@@ -1079,6 +1079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightControl
   light: {fileID: 1011722336}
   action: {fileID: -5684558904543120851, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  step: 0.25
 --- !u!1 &1414772019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,9 +1846,10 @@ MonoBehaviour:
   m_text: 'Controls
 
 
-    Button A  - Teleport
+    Right Trigger  - Change Light
 
-    Button B -  Exit Program'
+    Right Primary -  Exit
+    Program'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
