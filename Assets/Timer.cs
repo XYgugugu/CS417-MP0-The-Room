@@ -13,9 +13,11 @@ public class Timer : MonoBehaviour
 
     private int remainingSeconds;
     private Coroutine timerCoroutine;
+    private ScoreBoard scoreboard;
 
     void Start()
     {
+        scoreboard = GetComponent<ScoreBoard>();
         remainingSeconds = Mathf.Max(0, startSeconds);
         UpdateTimerText(remainingSeconds);
 

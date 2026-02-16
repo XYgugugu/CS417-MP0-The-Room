@@ -16,15 +16,21 @@ public class ScoreBoard : MonoBehaviour
         scoreboard.text = $"Score: {score}";
     }
 
-    public void incrementScore()
+    public void incrementScore(int d_score)
     {
-        score++;
+        score += d_score;
         renderScoreBoard();
     }
 
-    public void decreaseScore()
+    public void decreaseScore(int d_score)
     {
-        score--;
+        score = Mathf.Max(0, score - d_score);
+        renderScoreBoard();
+    }
+
+    public void reset()
+    {
+        score = 0;
         renderScoreBoard();
     }
 }
