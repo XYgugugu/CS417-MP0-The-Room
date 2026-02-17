@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
         remainingSeconds = Mathf.Max(0, startSeconds);
         UpdateTimerText(remainingSeconds);
 
-        // timerCoroutine = StartCoroutine(CountdownRoutine());
+        timerCoroutine = StartCoroutine(CountdownRoutine());
     }
 
     private IEnumerator CountdownRoutine()
