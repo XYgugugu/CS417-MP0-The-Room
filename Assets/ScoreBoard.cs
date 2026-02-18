@@ -5,8 +5,11 @@ public class ScoreBoard : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private TMP_Text scoreboard;
+    [SerializeField] private GameObject obsWall;
     private int score = 0;
     private int keysUnlocked = 0;
+    private bool winState = false;
+
     void Start()
     {
         score = 0;
@@ -22,12 +25,7 @@ public class ScoreBoard : MonoBehaviour
     {
         score += d_score;
         renderScoreBoard();
-    }
-
-    public void decreaseScore(int d_score)
-    {
-        score = Mathf.Max(0, score - d_score);
-        renderScoreBoard();
+        checkAndRemoveWall();
     }
 
     public void reset()
@@ -40,5 +38,19 @@ public class ScoreBoard : MonoBehaviour
     {
         keysUnlocked++;
         renderScoreBoard();
+        checkAndRemoveWall();
+    }
+
+    private void checkAndRemoveWall()
+    {
+        if (score < 2) return;
+        if (keysUnlocked < 3) return;
+        winState = true;
+        Destroy(obsWall);
+    }
+    
+    public bool getWinState()
+    {
+        return winState;
     }
 }
