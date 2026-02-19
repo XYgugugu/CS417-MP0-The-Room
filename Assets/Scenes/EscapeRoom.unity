@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f73b8b0c1b6a174da32877245960b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
-  startSeconds: 60
+  startSeconds: 360
   timerText: {fileID: 420784154}
   loss: {fileID: 1223916766}
 --- !u!114 &460609726
