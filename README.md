@@ -1,5 +1,5 @@
 CS417 MP1
 
 Contributors:
-Ryan Lee
+Ryan Lee,
 Encheng Xie
